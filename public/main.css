@@ -1,0 +1,128 @@
+p {
+	font-size: 1.2em;
+}
+
+ol li {
+	font-size: 1.2em;
+}
+
+body { 
+	padding-top: 50px; 
+}
+
+.label-default {
+	background-color: #FA743E;
+}
+
+.jumbotron {
+	background-image: url('/img/diana_desk_instant.jpg');
+	background-size: cover;
+	color: #fff;
+}
+
+figure {
+	margin-top: 20px;
+}
+
+figure img {
+	width: 400px;
+	display: block; 
+	max-width: 100%; 
+	height: auto;
+	box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+	margin-bottom: 15px;
+	float: right;
+}
+
+figure figcaption {
+	clear: both;
+}
+
+figcaption a {
+	float: right;
+}
+
+hr {
+	width: 80%;
+}
+
+ul.chart {
+	list-style-type: none;
+}
+
+.chart {
+	width: 100%;
+	height: 18em;
+}
+
+.chart li {
+	height: 2em;
+	background-color: #FA743E;
+	color: #fff;
+	margin-top: 1em;
+}
+
+ul.chart-axis {
+	list-style-type: none;	
+}
+
+.chart-axis li {
+	width: 22%;
+	display: inline-block;
+	text-align: right;
+}
+
+img#img-profile {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+}
+
+img.img-icon {
+	height: 50px;
+	width: 50px;
+	margin: 0px 10px;
+}
+
+div#section-social {
+	margin-bottom: 30px;
+}
+
+footer {
+	text-align: center;
+	background-color: #FA743E;
+	margin-top: 30px;
+}
+
+@media screen and (max-width: 480px) {
+	ul.chart-axis {
+		display: none;	
+	}
+}
+
+@media screen and (max-width: 767px) {
+    figure img {
+		margin-left: auto;
+		margin-right: auto;
+		float: none;
+	}
+	
+	figcaption {
+		text-align: center;		
+	}
+	
+	figcaption a {
+		float: none;
+	}
+	
+	article div {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	
+	div#contact-body {
+		text-align: center;
+	}
+
+}
