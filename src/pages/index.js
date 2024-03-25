@@ -1,4 +1,5 @@
 import * as React from "react"
+import Layout from '../components/layout'
 
 const pageStyles = {
   color: "#232129",
@@ -79,98 +80,74 @@ const badgeStyle = {
 
 const links = [
   {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
+    text: "How to create a Vale linter custom rule: Manually vs. AI-prompting approach",
+    url: "https://medium.com/@meetdianacheung/how-to-create-a-vale-linter-custom-rule-031aa00e4100",
     description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
+      "A step-by-step tutorial on creating a custom rule in the open-source Vale prose linter. The official documentation is targeted towards intermediate-level programmers. The tutorial helps technical writers with basic coding experience by breaking down the process and providing AI prompts for assistance. It is an experiment to incorporate AI prompts in technical documentation to assist end users and their AI assistants in customizing a dev tool.",
     color: "#1099A8",
   },
   {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
+    text: "Meta Llama 2 vs. OpenAI GPT-4: A Comparative Analysis of an Open-Source vs. Proprietary LLM",
+    url: "https://medium.com/@meetdianacheung/meta-llama-2-vs-openai-gpt-4-785589efe15e",
     description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
+      "A technical comparison between Large Language Models Llama 2 and GPT-4 on the dimensions of model releases and architectures, LLM benchmarks, access methods, and selection factors for project use. The article aims to inform software engineers building LLM-powered apps of the strengths and weaknesses of both models. It also provides clear guidelines for picking a model based on a project&apos;s utilization, complexity requirements, and specific use cases.",
+    color: "#E95800",
+  },
+  {
+    text: "Introducing the Emerging LLM Tech Stack: Components for LLM Retrieval Augmented Generation (RAG)",
+    url: "https://medium.com/@meetdianacheung/introducing-the-emerging-llm-tech-stack-17ddc83ca640",
+    description:
+      "A conceptual guide explaining the various tech stack layers for implementing Large Language Model Retrieval Augmented Generation (RAG): data, model, orchestration, and operational. The article targets software engineers building LLM-powered apps and lists available tools in each layer for kickstarting development.",
     color: "#BC027F",
   },
   {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
+    text: "Demystifying Generative AI: Introducing the Underlying Technologies & Models of Generative AI",
+    url: "https://medium.com/@meetdianacheung/demystifying-generative-ai-528c1509f865",
     description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
+      "A conceptual guide explaining the evolution of generative AI, including machine learning concepts, deep learning models, transformer architecture, and Large Language Models. The article educates software engineers newer to artificial intelligence and machine learning, providing them with easy-to-understand fundamentals.",
     color: "#0D96F2",
   },
   {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
+    text: "How to handle multiple WebRTC peer connections in a single client",
+    url: "https://medium.com/@meetdianacheung/how-to-handle-multiple-webrtc-peer-connections-in-a-single-client-e316c452aad9",
     description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
+      "A quick how-to guide on handling multiple peer connections with WebRTC, an open-source library for establishing direct connections between 2 browser clients to transfer live video and audio streams. The official documentation and available tutorials only illustrate 1 WebRTC connection per client or hardcoded multiple connections. The piece details a practical solution with code examples for other software engineers dealing with the same issue.",
     color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
   },
 ]
 
 const IndexPage = () => {
+  
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time. 😎
+    <Layout pageTitle="Diana Cheung Portfolio">
+      <h2>About Me</h2>
+      <p style={descriptionStyle}>
+        Hello, I am a technical writer based in California, aiming to make complex technical content easy to understand and engaging for the target audience. I specialize in crafting technical content supporting the developer experience, such as conceptual explainers, how-to guides, tutorials, code samples, and library documentation. My areas of interest are AI tech and dev tools. I have experience programming in JavaScript and Python and collaborating remotely with cross-functional teams and stakeholders.
       </p>
+      <p style={descriptionStyle}>
+        Let&apos;s discuss how I can help with your technical documentation. Please connect via <a href="https://www.linkedin.com/in/meetdianacheung/">LinkedIn</a>.
+      </p>
+
+      <h2>Relevant Works</h2>
       <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
+      {links.map(link => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
             <span>
               <a
                 style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+                href={`${link.url}`}
               >
                 {link.text}
               </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
               <p style={descriptionStyle}>{link.description}</p>
             </span>
           </li>
         ))}
       </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
+    </Layout>
   )
 }
 
-export default IndexPage
+export const Head = () => <title>Home</title>
 
-export const Head = () => <title>Home Page</title>
+export default IndexPage
