@@ -6,6 +6,7 @@ module.exports = {
     title: `Meet Diana Cheung`,
     siteUrl: `https://www.yourdomain.tld`
   },
+  pathPrefix: "/MeetDianaCheung",
   //TODO: add "gatsby-plugin-google-gtag"
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
