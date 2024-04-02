@@ -1,5 +1,6 @@
 import * as React from "react"
 import Layout from '../components/layout'
+// import { StaticImage } from 'gatsby-plugin-image'
 
 const pageStyles = {
   color: "#232129",
@@ -36,7 +37,7 @@ const listItemStyles = {
 }
 
 const linkStyle = {
-  color: "#8954A8",
+  color: "#02b3ce",
   fontWeight: "bold",
   fontSize: 16,
   verticalAlign: "5%",
@@ -49,8 +50,8 @@ const docLinkStyle = {
 }
 
 const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
+  color: "#FFFFFF",
+  fontSize: 16,
   marginTop: 10,
   marginBottom: 0,
   lineHeight: 1.25,
@@ -79,6 +80,13 @@ const badgeStyle = {
 }
 
 const links = [
+  {
+    text: "The (Un)official Anthropic API Documentation: recreating and improving Anthropic’s Messages API",
+    url: "https://dc-78.mintlify.app/",
+    description:
+      "A sample API documentation project based on Anthropic's Messages API. It includes a reverse-engineered OpenAPI Specification 3.0 file, an interactive endpoint, and an audit of Anthropic's existing API documentation. The site is powered by Mintlify and Github.",
+    color: "#8EB814",
+  },
   {
     text: "How to create a Vale linter custom rule: Manually vs. AI-prompting approach",
     url: "https://medium.com/@meetdianacheung/how-to-create-a-vale-linter-custom-rule-031aa00e4100",
@@ -122,10 +130,19 @@ const IndexPage = () => {
     <Layout pageTitle="Diana Cheung Portfolio">
       <h2>About Me</h2>
       <p style={descriptionStyle}>
-        Hello, I am a technical writer based in California, aiming to make complex technical content easy to understand and engaging for the target audience. I specialize in crafting technical content supporting the developer experience, such as conceptual explainers, how-to guides, tutorials, code samples, and library documentation. My areas of interest are AI tech and dev tools. I have experience programming in JavaScript and Python and collaborating remotely with cross-functional teams and stakeholders.
+        Hello, I am a technical writer based in California, aiming to make complex technical content easy to understand and engaging for the target audience. I specialize in crafting technical content supporting the developer experience, such as conceptual explainers, how-to guides, tutorials, code samples, and library documentation. My areas of interest are AI tech and dev tools. I have experience collaborating remotely with cross-functional teams and stakeholders.
       </p>
       <p style={descriptionStyle}>
-        Let&apos;s discuss how I can help with your technical documentation. Please connect via <a href="https://www.linkedin.com/in/meetdianacheung/">LinkedIn</a>.
+        Languages & Markups: JavaScript, Python, HTML, CSS, XML, Markdown, YAML
+      </p>
+      <p style={descriptionStyle}>
+        Toolings: Git, Github, OpenAPI Spec, Postman, Mintlify, Gatsby.js, Visual Studio Code, GPT-4, Claude AI
+      </p>
+      <p style={descriptionStyle}>
+        Education: University of California, San Diego, BS Computer Science & University of Southern California, MBA
+      </p>
+      <p style={descriptionStyle}>
+        Let&apos;s discuss how I can help with your technical documentation. Please connect via <a style={linkStyle} href="https://www.linkedin.com/in/meetdianacheung/">LinkedIn</a>.
       </p>
 
       <h2>Relevant Works</h2>
@@ -136,6 +153,8 @@ const IndexPage = () => {
               <a
                 style={linkStyle}
                 href={`${link.url}`}
+                target="_blank"
+                rel="noreferrer"
               >
                 {link.text}
               </a>
