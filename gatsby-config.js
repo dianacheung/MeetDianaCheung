@@ -3,8 +3,9 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Meet Diana Cheung`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: 'Meet Diana Cheung',
+    siteUrl: 'https://dianacheung.github.io/MeetDianaCheung/',
+    description: 'Diana Cheung technical writing portfolio',
   },
   pathPrefix: "/MeetDianaCheung",
   //TODO: add "gatsby-plugin-google-gtag"
