@@ -1,0 +1,13 @@
+/* hack to remove 8px margin */
+
+html, 
+body
+#___gatsby {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
